@@ -1,10 +1,12 @@
 # Simple Date Widget
+
+**A:** ↴![Date Widget Screenshot](https://github.com/DateWidget//DateWidget/blob/SimpleDateWidget/playstore.png?raw=true)
 **Q:** What is Simple Date Widget?
 **A:** Simple Date Widget is widget For MacOS that display the current date in large easy read text using the system accent color for personalization with the ability to copy the date on the 00/00/0000 format
 
 **Q:** How do I copy the current date in the 00/00/000 format from Simple Date Widget?
 **A:**  Open notification center click on the Simple Date Widget,  So screen will flash for one second witch is normal since in MacOS click on a widget will open the app associate with the widget  
-all i'm doing is checking for when Application Did Become Active then Copying the current date in the 00/00/000 format to the clipboard & then Closing the Application, even those method is hackie, Yet reliable workaround & since im not putting on the app store IDK if it works it works.
+all i'm doing is checking for when Application Did Become Active then Copying the current date in the 00/00/000 format to the clipboard & then Closing the Application, even those method is hackie, Yet reliable workaround & since im not putting on the app store IDC, Because in my book if it works it works. Also double clicking the Application icon does the same 
 
 **Q:** How does Simple Date Widget look?
 **A:** ↴![Date Widget Screenshot](https://github.com/DateWidget//DateWidget/blob/Master/Screenshot/DateWidget.png?raw=true)
