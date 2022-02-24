@@ -65,6 +65,7 @@ struct DateWidget: Widget {
         }
         .configurationDisplayName("Date Widget")
         .description("Display The Ccrrent Date.")
+        .supportedFamilies([.systemMedium])
     }
 }
 
