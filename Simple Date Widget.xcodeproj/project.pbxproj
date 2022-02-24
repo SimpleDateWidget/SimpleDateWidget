@@ -12,7 +12,7 @@
 		CB6105E927974D41001BE8C8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6105CF279749ED001BE8C8 /* WidgetKit.framework */; platformFilter = maccatalyst; };
 		CB6105EA27974D41001BE8C8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6105D1279749ED001BE8C8 /* SwiftUI.framework */; platformFilter = maccatalyst; };
 		CB6105ED27974D41001BE8C8 /* DateWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6105EC27974D41001BE8C8 /* DateWidget.swift */; };
-		CB6105F427974D41001BE8C8 /* DateExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CB6105E827974D41001BE8C8 /* DateExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CB6105F427974D41001BE8C8 /* Simple Date WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CB6105E827974D41001BE8C8 /* Simple Date WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CBA0F82827C71C8900AAF57E /* DateFormated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA0F82727C71C8900AAF57E /* DateFormated.swift */; };
 		CBA0F82927C71C8900AAF57E /* DateFormated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA0F82727C71C8900AAF57E /* DateFormated.swift */; };
 /* End PBXBuildFile section */
@@ -34,7 +34,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				CB6105F427974D41001BE8C8 /* DateExtension.appex in Embed App Extensions */,
+				CB6105F427974D41001BE8C8 /* Simple Date WidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,17 +42,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CB6105B7279749D9001BE8C8 /* Date.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Date.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB6105B7279749D9001BE8C8 /* Simple Date Widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Date Widget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6105BA279749D9001BE8C8 /* DateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateApp.swift; sourceTree = "<group>"; };
 		CB6105BE279749D9001BE8C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB6105C3279749D9001BE8C8 /* Date.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Date.entitlements; sourceTree = "<group>"; };
 		CB6105CF279749ED001BE8C8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		CB6105D1279749ED001BE8C8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		CB6105E827974D41001BE8C8 /* DateExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DateExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB6105E827974D41001BE8C8 /* Simple Date WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Simple Date WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6105EC27974D41001BE8C8 /* DateWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateWidget.swift; sourceTree = "<group>"; };
 		CB6105F027974D41001BE8C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB6105F127974D41001BE8C8 /* DateWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DateWidget.entitlements; sourceTree = "<group>"; };
-		CBA0F82727C71C8900AAF57E /* DateFormated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormated.swift; path = Date/DateFormated.swift; sourceTree = "<group>"; };
+		CBA0F82727C71C8900AAF57E /* DateFormated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				CBA0F82727C71C8900AAF57E /* DateFormated.swift */,
-				CB6105B9279749D9001BE8C8 /* Date */,
+				CB6105B9279749D9001BE8C8 /* SimpleDateWidget */,
 				CB6105EB27974D41001BE8C8 /* DateWidget */,
 				CB6105CE279749ED001BE8C8 /* Frameworks */,
 				CB6105B8279749D9001BE8C8 /* Products */,
@@ -89,20 +89,20 @@
 		CB6105B8279749D9001BE8C8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CB6105B7279749D9001BE8C8 /* Date.app */,
-				CB6105E827974D41001BE8C8 /* DateExtension.appex */,
+				CB6105B7279749D9001BE8C8 /* Simple Date Widget.app */,
+				CB6105E827974D41001BE8C8 /* Simple Date WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CB6105B9279749D9001BE8C8 /* Date */ = {
+		CB6105B9279749D9001BE8C8 /* SimpleDateWidget */ = {
 			isa = PBXGroup;
 			children = (
 				CB6105BA279749D9001BE8C8 /* DateApp.swift */,
 				CB6105BE279749D9001BE8C8 /* Assets.xcassets */,
 				CB6105C3279749D9001BE8C8 /* Date.entitlements */,
 			);
-			path = Date;
+			path = SimpleDateWidget;
 			sourceTree = "<group>";
 		};
 		CB6105CE279749ED001BE8C8 /* Frameworks */ = {
@@ -127,9 +127,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CB6105B6279749D9001BE8C8 /* Date */ = {
+		CB6105B6279749D9001BE8C8 /* Simple Date Widget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CB6105C6279749D9001BE8C8 /* Build configuration list for PBXNativeTarget "Date" */;
+			buildConfigurationList = CB6105C6279749D9001BE8C8 /* Build configuration list for PBXNativeTarget "Simple Date Widget" */;
 			buildPhases = (
 				CB6105B3279749D9001BE8C8 /* Sources */,
 				CB6105B4279749D9001BE8C8 /* Frameworks */,
@@ -141,14 +141,14 @@
 			dependencies = (
 				CB6105F327974D41001BE8C8 /* PBXTargetDependency */,
 			);
-			name = Date;
+			name = "Simple Date Widget";
 			productName = Date;
-			productReference = CB6105B7279749D9001BE8C8 /* Date.app */;
+			productReference = CB6105B7279749D9001BE8C8 /* Simple Date Widget.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CB6105E727974D41001BE8C8 /* DateExtension */ = {
+		CB6105E727974D41001BE8C8 /* Simple Date WidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CB6105F527974D41001BE8C8 /* Build configuration list for PBXNativeTarget "DateExtension" */;
+			buildConfigurationList = CB6105F527974D41001BE8C8 /* Build configuration list for PBXNativeTarget "Simple Date WidgetExtension" */;
 			buildPhases = (
 				CB6105E427974D41001BE8C8 /* Sources */,
 				CB6105E527974D41001BE8C8 /* Frameworks */,
@@ -158,9 +158,9 @@
 			);
 			dependencies = (
 			);
-			name = DateExtension;
+			name = "Simple Date WidgetExtension";
 			productName = DateWidgetExtension;
-			productReference = CB6105E827974D41001BE8C8 /* DateExtension.appex */;
+			productReference = CB6105E827974D41001BE8C8 /* Simple Date WidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -181,7 +181,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CB6105B2279749D9001BE8C8 /* Build configuration list for PBXProject "Date" */;
+			buildConfigurationList = CB6105B2279749D9001BE8C8 /* Build configuration list for PBXProject "Simple Date Widget" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -194,8 +194,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CB6105B6279749D9001BE8C8 /* Date */,
-				CB6105E727974D41001BE8C8 /* DateExtension */,
+				CB6105B6279749D9001BE8C8 /* Simple Date Widget */,
+				CB6105E727974D41001BE8C8 /* Simple Date WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -242,7 +242,7 @@
 /* Begin PBXTargetDependency section */
 		CB6105F327974D41001BE8C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CB6105E727974D41001BE8C8 /* DateExtension */;
+			target = CB6105E727974D41001BE8C8 /* Simple Date WidgetExtension */;
 			targetProxy = CB6105F227974D41001BE8C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -376,6 +376,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -383,7 +384,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BAproductions.Date;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BAproductions.SimpleDateWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -403,6 +404,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -410,7 +412,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BAproductions.Date;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BAproductions.SimpleDateWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -429,7 +431,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DateWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = DateWidget;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -438,7 +440,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BAproductions.Date.DateWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BAproductions.SimpleDateWidget.DateWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -458,7 +460,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DateWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = DateWidget;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -467,7 +469,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BAproductions.Date.DateWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BAproductions.SimpleDateWidget.DateWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -478,7 +480,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CB6105B2279749D9001BE8C8 /* Build configuration list for PBXProject "Date" */ = {
+		CB6105B2279749D9001BE8C8 /* Build configuration list for PBXProject "Simple Date Widget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CB6105C4279749D9001BE8C8 /* Debug */,
@@ -487,7 +489,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CB6105C6279749D9001BE8C8 /* Build configuration list for PBXNativeTarget "Date" */ = {
+		CB6105C6279749D9001BE8C8 /* Build configuration list for PBXNativeTarget "Simple Date Widget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CB6105C7279749D9001BE8C8 /* Debug */,
@@ -496,7 +498,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CB6105F527974D41001BE8C8 /* Build configuration list for PBXNativeTarget "DateExtension" */ = {
+		CB6105F527974D41001BE8C8 /* Build configuration list for PBXNativeTarget "Simple Date WidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CB6105F627974D41001BE8C8 /* Debug */,
