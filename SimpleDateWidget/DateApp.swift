@@ -7,63 +7,58 @@
 
 import SwiftUI
 
-class TransparentWindowView: NSView {
-  override func viewDidMoveToWindow() {
-    window?.backgroundColor = .clear
-    super.viewDidMoveToWindow()
-  }
-}
-
-struct TransparentWindow: NSViewRepresentable {
-   func makeNSView(context: Self.Context) -> NSView { return TransparentWindowView() }
-   func updateNSView(_ nsView: NSView, context: Context) { }
-}
-
 class AppDelegate: NSObject, NSApplicationDelegate {
     let currentDate = Date()
-    func applicationDidFinishLaunching(_ notification: Notification) {
-        for window in NSApplication.shared.windows {
-            window.tabbingMode = .disallowed
-            window.appearance = .none
-            window.titlebarAppearsTransparent = true
-            window.titleVisibility = .hidden
-            window.backgroundColor = .controlBackgroundColor
-            window.showsResizeIndicator = false
-            window.showsToolbarButton = false
-            window.standardWindowButton(NSWindow.ButtonType.miniaturizeButton)!.isHidden = true
-            window.standardWindowButton(NSWindow.ButtonType.zoomButton)!.isHidden = true
-            window.standardWindowButton(NSWindow.ButtonType.closeButton)!.isHidden = true
-            window.hasShadow = false
-            window.titlebarSeparatorStyle = .none
-            window.toolbarStyle = .unifiedCompact
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        // Insert code here to initialize your application
+        guard let app = aNotification.object as? NSApplication else {
+            fatalError("no application object")
         }
-    }
-    func applicationDidBecomeActive(_ notification: Notification) {
+
+        guard app.windows.count > 0 else {
+            fatalError("no windows")
+        }
+        app.setActivationPolicy(.prohibited)
+        app.windows.first?.titleVisibility = .hidden
+        app.windows.first?.titlebarAppearsTransparent = true
+        app.windows.first?.isMovableByWindowBackground = true
+        app.windows.first?.backgroundColor = .clear
+        app.windows.first?.canHide = false
+        app.windows.first?.isOpaque = false
+        app.windows.first?.hasShadow = false
+        app.windows.first?.isRestorable = false
+        app.windows.first?.isDocumentEdited = false
+        app.windows.first?.showsResizeIndicator = false
+        app.windows.first?.showsToolbarButton = false
+        app.windows.first?.styleMask = .titled
+        app.windows.first?.styleMask.insert(.borderless)
+        app.windows.first?.level = .mainMenu
+        app.windows.first?.standardWindowButton(.zoomButton)?.isHidden = true
+        app.windows.first?.standardWindowButton(.closeButton)?.isHidden = true
+        app.windows.first?.standardWindowButton(.miniaturizeButton)?.isHidden = true
+        app.setActivationPolicy(.prohibited)
+        app.appearance = .none
         NSWindow.allowsAutomaticWindowTabbing = false
-        UserDefaults.standard.set(true, forKey: "NSFullScreenMenuItemEverywhere")
-        if let mainMenu = NSApp.mainMenu {
-              DispatchQueue.main.async {
-                  if let fileMenu = mainMenu.items.first(where: { $0.title == "File" }) {
-                      mainMenu.removeItem(fileMenu)
-                  }
-                  if let editMenu = mainMenu.items.first(where: { $0.title == "Edit" }) {
-                      mainMenu.removeItem(editMenu)
-                  }
-                  if let viewMenu = mainMenu.items.first(where: { $0.title == "View" }) {
-                      mainMenu.removeItem(viewMenu)
-                  }
-                  if let windowMenu = mainMenu.items.first(where: { $0.title == "Window" }) {
-                      mainMenu.removeItem(windowMenu)
-                  }
-                  if let helpMenu = mainMenu.items.first(where: { $0.title == "Help" }) {
-                      mainMenu.removeItem(helpMenu)
-                  }
-              }
-          }
+        if let mainMenu = NSApp .mainMenu {
+            DispatchQueue.main.async {
+                for item in mainMenu.items {
+                    mainMenu.removeItem(item);
+                }
+            }
+        }
+        app.windows.first?.toggleFullScreen(self)
+        app.windows.first?.miniaturize(self)
+        app.windows.first?.setIsMiniaturized(true)
+        app.windows.first?.setIsZoomed(true)
+        app.windows.first?.setIsVisible(true)
         let pasteBoard = NSPasteboard.general
         pasteBoard.clearContents()
         pasteBoard.setString("\(currentDate.formatDT(format: "MM/dd/yyyy"))", forType: NSPasteboard.PasteboardType.string)
         NSApp.terminate(self)
+    }
+
+    func applicationWillTerminate(_ aNotification: Notification) {
+        // Insert code here to tear down your application
     }
 }
 
