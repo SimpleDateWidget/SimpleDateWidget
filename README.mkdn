@@ -1,5 +1,4 @@
-
-# Simple Date Widget  
+# Simple Date Widget
 
 ![Date Widget Screenshot](https://raw.githubusercontent.com/SimpleDateWidget/SimpleDateWidget/Master/SimpleDateWidget/Assets.xcassets/AppIcon.appiconset/256.png?raw=true)
 -
@@ -11,4 +10,7 @@
 ![Date Widget Screenshot](https://github.com/SimpleDateWidget/SimpleDateWidget/blob/Master/Screenshot/DateWidget.png?raw=true)
 
 **Q:** How do I copy the current date in the 00/00/000 format from Simple Date Widget?
-**A:** Open notification center click on the Simple Date Widget, So screen will flash for one second witch is normal since in MacOS click on a widget will open the app associate with the widget all i'm doing is checking for when Application Did Become Active then Copying the current date in the 00/00/000 format to the clipboard & then Closing the Application, even those method is hackie, Yet reliable workaround & since im not putting on the app store IDC, Because in my book if it works it works. Also double clicking the Application icon does the same
+**A:** Open notification center click on the Simple Date Widget, So screen will flash for one second witch is normal since in MacOS click on a widget will open the app associate with the widget all I’m doing is checking for when Application Did Become Active then Copying the current date in the 00/00/000 format to the clipboard & then Closing the Application, even those method is hackie, Yet reliable workaround & since I’m not putting on the app store IDC, Because in my book if it works it works. Also double clicking the Application icon does the same. This still apples if you want build the widget for older version of macOS that’s don’t support interactive widget.
+
+If you want build the widget for older version of macOS that don’t support interactive widget.
+Please revert this commit 01b8996d77d78a98ac24688104cf878e1e53a911 & manually revert this commit 1e5d2782abe7f8bc79ad76fc66ac6ef46f9bbbb.
