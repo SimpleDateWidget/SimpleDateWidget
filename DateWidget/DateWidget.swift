@@ -13,12 +13,11 @@ import AppIntents
 struct DateAppIntent: AppIntent, WidgetConfigurationIntent {
     static var title: LocalizedStringResource = "Copy the current date in the 00/00/00 format"
     static var description = IntentDescription("Copy the current date in the 00/00/00 format ")
-    static let currentDate = Date()
-    
+
     func perform() async throws -> some IntentResult {
         let pasteBoard = NSPasteboard.general
         pasteBoard.clearContents()
-        pasteBoard.setString("\(DateAppIntent.currentDate.formatDT(format: "MM/dd/yyyy"))", forType: NSPasteboard.PasteboardType.string)
+        pasteBoard.setString("\(Date().formatDT(format: "MM/dd/yyyy"))", forType: NSPasteboard.PasteboardType.string)
         return .result()
     }
 }
