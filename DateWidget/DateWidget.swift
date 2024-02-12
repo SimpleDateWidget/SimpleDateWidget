@@ -74,9 +74,8 @@ struct DateWidgetEntryView : View {
         switch widgetFamily {
         case .systemMedium:
             widgetWiew()
-         default:
+        default:
             widgetWiew()
-
         }
     }
 
@@ -115,8 +114,9 @@ struct DateWidget: Widget {
         ) { entry in
             DateWidgetEntryView(entry: entry)
         }
-        .containerBackgroundRemovable(true)
+        .contentMarginsDisabled()
         .supportedFamilies([.systemMedium])
+        .containerBackgroundRemovable(true)
         .configurationDisplayName("Date Widget")
         .description("Display The Ccrrent Date.")
     }
